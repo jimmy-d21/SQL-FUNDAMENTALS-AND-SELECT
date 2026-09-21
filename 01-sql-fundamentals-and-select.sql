@@ -190,3 +190,18 @@ FROM products;
 -- Standing Desk         | 450.00 | 8              | 3600.00
 -- Coffee Mug            | 15.00  | 0              | 0.00
 -- Stainless Steel Bottle | 22.00  | 75             | 1650.00
+
+
+-- Example 9 — Find Unique Customer Countries
+-- Find unique countries
+SELECT DISTINCT country 
+FROM customers;
+
+-- Result:
+-- country
+-- Germany
+-- USA
+-- Philippines
+-- Japan
+-- Canada
+-- Spain
