@@ -805,3 +805,56 @@ FROM mytable
     HAVING constraint_expression
     ORDER BY column ASC/DESC
     LIMIT count OFFSET COUNT;
+
+-- Beginner SQL Checklist
+[x] SELECT
+
+[x] FROM
+
+[x] Column selection
+
+[x] Aliases (AS)
+
+[x] DISTINCT
+
+[x] WHERE
+
+[x] Comparison operators (=, <>, >, <, >=, <=)
+
+[x] AND
+
+[x] OR
+
+[x] NOT
+
+[x] IN
+
+[x] BETWEEN
+
+[x] LIKE
+
+[x] NULL handling (IS NULL, IS NOT NULL)
+
+[x] ORDER BY
+
+[x] ASC
+
+[x] DESC
+
+[x] LIMIT
+
+[x] OFFSET
+
+[x] COUNT
+
+[x] SUM
+
+[x] AVG
+
+[x] MIN
+
+[x] MAX
+
+[x] GROUP BY
+
+[x] HAVING
