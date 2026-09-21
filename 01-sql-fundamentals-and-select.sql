@@ -230,3 +230,16 @@ WHERE country = 'USA';
 -- customer_id | first_name | last_name | email                  | city     | country | signup_date
 -- 1           | John       | Smith     | john.smith@example.com | New York | USA     | 2023-01-15
 -- 6           | Sarah      | Connor    | sarah.c@example.com    | New York | USA     | 2023-06-18
+
+
+-- Example 12 — Filter Products Greater Than a Price (>)
+-- Filter for prices strictly greater than 50
+SELECT product_name, price 
+FROM products 
+WHERE price > 50.00;
+
+-- Result:
+-- product_name        | price
+-- Mechanical Keyboard | 85.00
+-- Ergonomic Chair     | 250.00
+-- Standing Desk       | 450.00
