@@ -243,3 +243,17 @@ WHERE price > 50.00;
 -- Mechanical Keyboard | 85.00
 -- Ergonomic Chair     | 250.00
 -- Standing Desk       | 450.00
+
+
+-- Example 13 — Filter Products Less Than or Equal To (<=)
+-- Filter using <= operator
+SELECT product_name, price 
+FROM products 
+WHERE price <= 25.50;
+
+-- Result:
+-- product_name          | price
+-- Wireless Mouse        | 25.50
+-- USB-C Cable           | 12.00
+-- Coffee Mug            | 15.00
+-- Stainless Steel Bottle | 22.00
