@@ -551,3 +551,18 @@ ORDER BY category ASC, price DESC;
 -- Furniture   | Ergonomic Chair       | 250.00
 -- Kitchenware | Stainless Steel Bottle | 22.00
 -- Kitchenware | Coffee Mug            | 15.00
+
+
+-- Example 34 — Limit Number of Output Rows
+-- GOAL: Find the top 3 most expensive products.
+-- Get top N results using LIMIT
+SELECT product_name, price 
+FROM products 
+ORDER BY price DESC 
+LIMIT 3;
+
+-- Result:
+-- product_name        | price
+-- Standing Desk       | 450.00
+-- Ergonomic Chair     | 250.00
+-- Mechanical Keyboard | 85.00
