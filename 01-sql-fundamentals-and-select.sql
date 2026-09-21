@@ -435,3 +435,16 @@ WHERE category LIKE '_u%';
 -- product_name   | category
 -- Ergonomic Chair| Furniture
 -- Standing Desk  | Furniture
+
+
+-- Example 27 — Filter Missing Data with IS NULL
+-- GOAL: Find all customers who do NOT have an email address recorded.
+-- Check for missing/NULL values
+SELECT first_name, last_name, email 
+FROM customers 
+WHERE email IS NULL;
+
+-- Result:
+-- first_name | last_name | email
+-- David      | Lee       | NULL
+-- Carlos     | Gomez     | NULL
