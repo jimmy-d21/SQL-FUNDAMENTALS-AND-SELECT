@@ -297,3 +297,16 @@ WHERE category = 'Electronics' AND price < 50.00;
 -- product_name  | category    | price
 -- Wireless Mouse | Electronics | 25.50
 -- USB-C Cable    | Electronics | 12.00
+
+
+-- Example 17 — Filter with OR Condition
+-- Either condition can be TRUE
+SELECT first_name, last_name, country 
+FROM customers 
+WHERE country = 'USA' OR country = 'Germany';
+
+-- Result:
+-- first_name | last_name | country
+-- John       | Smith     | USA
+-- Anna       | Müller    | Germany
+-- Sarah      | Connor    | USA
