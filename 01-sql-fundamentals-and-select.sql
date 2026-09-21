@@ -108,3 +108,21 @@ FROM products;
 -- Standing Desk         | 450.00
 -- Coffee Mug            | 15.00
 -- Stainless Steel Bottle | 22.00
+
+-- Example 4 — Rename Column Output Using Column Aliases Goal
+-- Using 'AS' to rename column headers in the output
+SELECT 
+    product_name AS Item, 
+    price AS Cost_in_USD 
+FROM products;
+
+-- Result:
+-- Item                   | cost_in_usd
+-- Wireless Mouse        | 25.50
+-- Mechanical Keyboard   | 85.00
+-- USB-C Cable           | 12.00
+-- Ergonomic Chair       | 250.00
+-- Standing Desk         | 450.00
+-- Coffee Mug            | 15.00
+-- Stainless Steel Bottle | 22.00
+
