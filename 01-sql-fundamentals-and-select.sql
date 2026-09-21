@@ -696,3 +696,14 @@ FROM orders;
 -- Result:
 -- total_revenue
 -- 970.00
+
+
+-- Example 44 — Calculate Average Order Value using AVG()
+-- GOAL: Find the average spending amount per order.
+-- Calculate arithmetic mean
+SELECT AVG(total_amount) AS average_order_value 
+FROM orders;
+
+-- Result:
+-- average_order_value
+-- 138.5714285714285714
