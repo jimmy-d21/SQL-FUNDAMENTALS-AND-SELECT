@@ -448,3 +448,19 @@ WHERE email IS NULL;
 -- first_name | last_name | email
 -- David      | Lee       | NULL
 -- Carlos     | Gomez     | NULL
+
+
+-- Example 28 — Filter Existing Data with IS NOT NULL
+-- GOAL: Find all customers who have a valid email address listed.
+-- Filter out NULL values
+SELECT first_name, email 
+FROM customers 
+WHERE email IS NOT NULL;
+
+-- Result:
+-- first_name | email
+-- John       | john.smith@example.com
+-- Maria      | maria.cruz@example.com
+-- Anna       | anna.m@example.de
+-- Kenji      | kenji.s@example.jp
+-- Sarah      | sarah.c@example.com
