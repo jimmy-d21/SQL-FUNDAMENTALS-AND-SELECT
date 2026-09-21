@@ -515,3 +515,21 @@ ORDER BY price ASC;
 -- Mechanical Keyboard   | 85.00
 -- Ergonomic Chair       | 250.00
 -- Standing Desk         | 450.00
+
+
+-- Example 32 — Sort Results Descending with ORDER BY DESC
+-- GOAL: List orders sorted by total amount from highest to lowest.
+-- Sort descending (DESC)
+SELECT order_id, total_amount, status 
+FROM orders 
+ORDER BY total_amount DESC;
+
+-- Result:
+-- order_id | total_amount | status
+-- 4        | 450.00       | Pending
+-- 2        | 250.00       | Completed
+-- 1        | 110.50       | Completed
+-- 5        | 85.00        | Cancelled
+-- 6        | 37.00        | Completed
+-- 3        | 25.50        | Shipped
+-- 7        | 12.00        | Pending
