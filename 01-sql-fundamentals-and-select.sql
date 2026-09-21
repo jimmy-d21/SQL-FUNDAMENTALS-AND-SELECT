@@ -396,3 +396,16 @@ WHERE price BETWEEN 20.00 AND 100.00;
 -- Wireless Mouse        | 25.50
 -- Mechanical Keyboard   | 85.00
 -- Stainless Steel Bottle | 22.00
+
+
+-- Example 24 — Pattern Matching with LIKE (%)
+-- GOAL: Find products whose name starts with the letter 'S'.
+-- Find matching prefixes using % wild-card
+SELECT product_name 
+FROM products 
+WHERE product_name LIKE 'S%';
+
+-- Result:
+-- product_name
+-- Standing Desk
+-- Stainless Steel Bottle
