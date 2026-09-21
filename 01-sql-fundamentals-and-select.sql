@@ -595,3 +595,21 @@ LIMIT 1;
 -- Result:
 -- product_name | price | stock_quantity
 -- USB-C Cable  | 12.00 | 200
+
+
+-- Example 37 — Sort Customer Names Alphabetically
+-- GOAL: Display all customers sorted alphabetically by last name, then first name.
+-- Alphabetical sorting
+SELECT last_name, first_name, city 
+FROM customers 
+ORDER BY last_name ASC, first_name ASC;
+
+-- Result:
+-- last_name | first_name | city
+-- Connor    | Sarah      | New York
+-- Cruz      | Maria      | Manila
+-- Gomez     | Carlos     | Madrid
+-- Lee       | David      | Toronto
+-- Müller    | Anna       | Berlin
+-- Sato      | Kenji      | Tokyo
+-- Smith     | John       | New York
