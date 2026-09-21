@@ -368,3 +368,17 @@ WHERE country IN ('USA', 'Japan', 'Germany');
 -- Kenji      | Japan
 -- Sarah      | USA
 
+
+-- Example 22 — Exclude Multiple Values using NOT IN
+-- GOAL: Find customers who do NOT live in USA or Canada.
+-- Exclude specific list of options
+SELECT first_name, country 
+FROM customers 
+WHERE country NOT IN ('USA', 'Canada');
+
+-- Result:
+-- first_name | country
+-- Maria      | Philippines
+-- Anna       | Germany
+-- Kenji      | Japan
+-- Carlos     | Spain
