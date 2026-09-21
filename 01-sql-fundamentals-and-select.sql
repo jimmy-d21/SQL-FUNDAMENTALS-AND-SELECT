@@ -257,3 +257,17 @@ WHERE price <= 25.50;
 -- USB-C Cable           | 12.00
 -- Coffee Mug            | 15.00
 -- Stainless Steel Bottle | 22.00
+
+
+-- Example 14 — Filter with Not Equal Operator (<>)
+-- Select non-electronics products
+SELECT product_name, category 
+FROM products 
+WHERE category <> 'Electronics';
+
+-- Result:
+-- product_name          | category
+-- Ergonomic Chair       | Furniture
+-- Standing Desk         | Furniture
+-- Coffee Mug            | Kitchenware
+-- Stainless Steel Bottle | Kitchenware
