@@ -497,3 +497,21 @@ WHERE (total_amount BETWEEN 20.00 AND 300.00)
 -- 2        | 250.00       | Completed
 -- 3        | 25.50        | Shipped
 -- 6        | 37.00        | Completed
+
+
+-- Example 31 — Sort Results Ascending with ORDER BY
+-- GOAL: List all products sorted by price from lowest to highest.
+-- Sorting rows ascending (ASC)
+SELECT product_name, price 
+FROM products 
+ORDER BY price ASC;
+
+-- Result:
+-- product_name          | price
+-- USB-C Cable           | 12.00
+-- Coffee Mug            | 15.00
+-- Stainless Steel Bottle | 22.00
+-- Wireless Mouse        | 25.50
+-- Mechanical Keyboard   | 85.00
+-- Ergonomic Chair       | 250.00
+-- Standing Desk         | 450.00
