@@ -613,3 +613,21 @@ ORDER BY last_name ASC, first_name ASC;
 -- Müller    | Anna       | Berlin
 -- Sato      | Kenji      | Tokyo
 -- Smith     | John       | New York
+
+
+-- Example 38 — Sort with NULL Values
+-- GOAL: List customers sorted by email address in ascending order.
+-- NULL ordering behavior
+SELECT first_name, email 
+FROM customers 
+ORDER BY email ASC;
+
+-- Result:
+-- first_name | email
+-- Anna       | anna.m@example.de
+-- John       | john.smith@example.com
+-- Kenji      | kenji.s@example.jp
+-- Maria      | maria.cruz@example.com
+-- Sarah      | sarah.c@example.com
+-- David      | NULL
+-- Carlos     | NULL
