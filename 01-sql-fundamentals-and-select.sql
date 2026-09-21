@@ -749,3 +749,18 @@ GROUP BY category;
 -- Kitchenware | 2
 -- Electronics | 3
 -- Furniture   | 2
+
+
+-- Example 48 — Calculate Total Revenue per Order Status
+-- GOAL: Find total sales revenue broken down by order status.
+-- Aggregating sums per status group
+SELECT status, SUM(total_amount) AS status_total 
+FROM orders 
+GROUP BY status;
+
+-- Result:
+-- status    | status_total
+-- Cancelled | 85.00
+-- Completed | 397.50
+-- Pending   | 462.00
+-- Shipped   | 25.50
