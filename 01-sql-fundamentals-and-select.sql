@@ -310,3 +310,18 @@ WHERE country = 'USA' OR country = 'Germany';
 -- John       | Smith     | USA
 -- Anna       | Müller    | Germany
 -- Sarah      | Connor    | USA
+
+
+-- Example 18 — Combine AND with OR Using Parentheses
+-- Use parentheses to group logical conditions correctly
+SELECT product_name, category, stock_quantity 
+FROM products 
+WHERE (category = 'Electronics' OR category = 'Furniture') 
+  AND stock_quantity > 10;
+
+-- Result:
+-- product_name       | category    | stock_quantity
+-- Wireless Mouse     | Electronics | 150
+-- Mechanical Keyboard| Electronics | 40
+-- USB-C Cable        | Electronics | 200
+-- Ergonomic Chair    | Furniture   | 15
