@@ -566,3 +566,18 @@ LIMIT 3;
 -- Standing Desk       | 450.00
 -- Ergonomic Chair     | 250.00
 -- Mechanical Keyboard | 85.00
+
+
+-- Example 35 — Paginate Results with OFFSET
+-- GOAL: Skip the first 2 cheapest products and display the next 3.
+-- Skip rows using OFFSET
+SELECT product_name, price 
+FROM products 
+ORDER BY price ASC 
+LIMIT 3 OFFSET 2;
+
+-- Result:
+-- product_name          | price
+-- Stainless Steel Bottle | 22.00
+-- Wireless Mouse        | 25.50
+-- Mechanical Keyboard   | 85.00
