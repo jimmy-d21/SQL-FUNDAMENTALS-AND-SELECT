@@ -64,7 +64,6 @@ INSERT INTO orders (customer_id, order_date, total_amount, status) VALUES
 
 
 -- Example 1 — Select All Columns from Customers Goal
-
 -- Retrieve every column and row from customers
 SELECT * 
 FROM customers;
@@ -78,3 +77,19 @@ FROM customers;
 -- 5           | Kenji      | Sato      | kenji.s@example.jp     | Tokyo    | Japan       | 2023-05-12
 -- 6           | Sarah      | Connor    | sarah.c@example.com    | New York | USA         | 2023-06-18
 -- 7           | Carlos     | Gomez     | NULL                   | Madrid   | Spain       | 2023-07-22
+
+
+-- Example 2 — Select Specific Columns Goal
+-- Retrieve specific columns
+SELECT first_name, last_name, email 
+FROM customers;
+
+-- Result:
+-- first_name | last_name | email
+-- John       | Smith     | john.smith@example.com
+-- Maria      | Cruz      | maria.cruz@example.com
+-- David      | Lee       | NULL
+-- Anna       | Müller    | anna.m@example.de
+-- Kenji      | Sato      | kenji.s@example.jp
+-- Sarah      | Connor    | sarah.c@example.com
+-- Carlos     | Gomez     | NULL
