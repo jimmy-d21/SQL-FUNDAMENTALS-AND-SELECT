@@ -481,3 +481,19 @@ WHERE product_name NOT LIKE '%Wireless%';
 -- Standing Desk
 -- Coffee Mug
 -- Stainless Steel Bottle
+
+
+-- Example 30 — Combine Range and Exclusion Filters
+-- GOAL: Find orders with total_amount between $20 and $300 AND status IS NOT 'Cancelled'.
+-- Combining BETWEEN, AND, and NOT EQUAL
+SELECT order_id, total_amount, status 
+FROM orders 
+WHERE (total_amount BETWEEN 20.00 AND 300.00) 
+  AND status <> 'Cancelled';
+
+-- Result:
+-- order_id | total_amount | status
+-- 1        | 110.50       | Completed
+-- 2        | 250.00       | Completed
+-- 3        | 25.50        | Shipped
+-- 6        | 37.00        | Completed
