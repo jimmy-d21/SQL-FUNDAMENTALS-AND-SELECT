@@ -218,3 +218,15 @@ FROM orders;
 -- Completed
 -- Pending
 -- Shipped
+
+
+-- Example 11 — Filter Exact Match with WHERE (=)
+-- Filter rows using WHERE and equality operator
+SELECT * 
+FROM customers 
+WHERE country = 'USA';
+
+-- Result:
+-- customer_id | first_name | last_name | email                  | city     | country | signup_date
+-- 1           | John       | Smith     | john.smith@example.com | New York | USA     | 2023-01-15
+-- 6           | Sarah      | Connor    | sarah.c@example.com    | New York | USA     | 2023-06-18
