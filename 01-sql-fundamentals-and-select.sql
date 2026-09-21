@@ -285,3 +285,15 @@ WHERE total_amount < 100.00;
 -- 5        | 85.00        | Cancelled
 -- 6        | 37.00        | Completed
 -- 7        | 12.00        | Pending
+
+
+-- Example 16 — Filter with AND Condition
+-- Both conditions must be TRUE
+SELECT product_name, category, price 
+FROM products 
+WHERE category = 'Electronics' AND price < 50.00;
+
+-- Result:
+-- product_name  | category    | price
+-- Wireless Mouse | Electronics | 25.50
+-- USB-C Cable    | Electronics | 12.00
