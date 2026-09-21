@@ -325,3 +325,18 @@ WHERE (category = 'Electronics' OR category = 'Furniture')
 -- Mechanical Keyboard| Electronics | 40
 -- USB-C Cable        | Electronics | 200
 -- Ergonomic Chair    | Furniture   | 15
+
+
+-- Example 19 — Filter Using NOT Operator
+-- Negating a condition
+SELECT first_name, country 
+FROM customers 
+WHERE NOT (country = 'USA');
+
+-- Result:
+-- first_name | country
+-- Maria      | Philippines
+-- David      | Canada
+-- Anna       | Germany
+-- Kenji      | Japan
+-- Carlos     | Spain
