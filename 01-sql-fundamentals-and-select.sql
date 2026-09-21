@@ -271,3 +271,17 @@ WHERE category <> 'Electronics';
 -- Standing Desk         | Furniture
 -- Coffee Mug            | Kitchenware
 -- Stainless Steel Bottle | Kitchenware
+
+
+-- Example 15 — Filter Orders using Less Than (<)
+-- Orders under $100
+SELECT order_id, total_amount, status 
+FROM orders 
+WHERE total_amount < 100.00;
+
+-- Result:
+-- order_id | total_amount | status
+-- 3        | 25.50        | Shipped
+-- 5        | 85.00        | Cancelled
+-- 6        | 37.00        | Completed
+-- 7        | 12.00        | Pending
