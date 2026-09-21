@@ -764,3 +764,16 @@ GROUP BY status;
 -- Completed | 397.50
 -- Pending   | 462.00
 -- Shipped   | 25.50
+
+
+-- Example 49 — Filter Aggregated Results using HAVING
+-- GOAL: Find product categories that contain MORE THAN 2 products.
+-- Filter grouped results using HAVING
+SELECT category, COUNT(*) AS product_count 
+FROM products 
+GROUP BY category 
+HAVING COUNT(*) > 2;
+
+-- Result:
+-- category    | product_count
+-- Electronics | 3
