@@ -685,3 +685,14 @@ FROM customers;
 -- Result:
 -- customers_with_email
 -- 5
+
+
+-- Example 43 — Calculate Total Revenue using SUM()
+-- GOAL: Calculate total monetary value of all placed orders.
+-- Sum total values across all rows
+SELECT SUM(total_amount) AS total_revenue 
+FROM orders;
+
+-- Result:
+-- total_revenue
+-- 970.00
