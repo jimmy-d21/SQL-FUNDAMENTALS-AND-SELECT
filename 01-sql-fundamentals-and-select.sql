@@ -581,3 +581,17 @@ LIMIT 3 OFFSET 2;
 -- Stainless Steel Bottle | 22.00
 -- Wireless Mouse        | 25.50
 -- Mechanical Keyboard   | 85.00
+
+
+-- Example 36 — Combine Filtering, Sorting, and Limiting
+-- GOAL: Find the cheapest single product in stock (stock_quantity > 0).
+-- Filter, sort, and limit in one query
+SELECT product_name, price, stock_quantity 
+FROM products 
+WHERE stock_quantity > 0 
+ORDER BY price ASC 
+LIMIT 1;
+
+-- Result:
+-- product_name | price | stock_quantity
+-- USB-C Cable  | 12.00 | 200
