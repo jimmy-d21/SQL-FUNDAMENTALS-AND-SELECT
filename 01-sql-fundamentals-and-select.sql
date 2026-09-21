@@ -143,3 +143,19 @@ FROM products;
 -- Standing Desk         | 450.00 | 405.0000
 -- Coffee Mug            | 15.00  | 13.5000
 -- Stainless Steel Bottle | 22.00  | 19.8000
+
+
+-- Example 6 — Combine First and Last Names (String Concatenation) Goal
+-- Concatenating strings in PostgreSQL using ||
+SELECT first_name || ' ' || last_name AS full_name 
+FROM customers;
+
+-- Result:
+-- full_name
+-- John Smith
+-- Maria Cruz
+-- David Lee
+-- Anna Müller
+-- Kenji Sato
+-- Sarah Connor
+-- Carlos Gomez
