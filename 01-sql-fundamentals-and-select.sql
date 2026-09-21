@@ -735,3 +735,17 @@ FROM customers;
 -- Sato      | SATO       | 4
 -- Connor    | CONNOR     | 6
 -- Gomez     | GOMEZ      | 5
+
+
+-- Example 47 — Count Products by Category using GROUP BY
+-- GOAL: Count how many products exist in each category.
+-- Grouping rows and aggregating
+SELECT category, COUNT(*) AS total_products 
+FROM products 
+GROUP BY category;
+
+-- Result:
+-- category    | total_products
+-- Kitchenware | 2
+-- Electronics | 3
+-- Furniture   | 2
