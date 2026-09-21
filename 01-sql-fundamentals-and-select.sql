@@ -63,7 +63,7 @@ INSERT INTO orders (customer_id, order_date, total_amount, status) VALUES
 (2, '2024-02-10', 12.00, 'Pending');
 
 
--- Example 1 — Select All Columns from Customers Goal
+-- Example 1 — Select All Columns from Customers
 -- Retrieve every column and row from customers
 SELECT * 
 FROM customers;
@@ -79,7 +79,7 @@ FROM customers;
 -- 7           | Carlos     | Gomez     | NULL                   | Madrid   | Spain       | 2023-07-22
 
 
--- Example 2 — Select Specific Columns Goal
+-- Example 2 — Select Specific Columns
 -- Retrieve specific columns
 SELECT first_name, last_name, email 
 FROM customers;
@@ -95,7 +95,7 @@ FROM customers;
 -- Carlos     | Gomez     | NULL
 
 
--- Example 3 — Select Product Names and Prices Goal
+-- Example 3 — Select Product Names and Prices
 -- Retrieve product details
 SELECT product_name, price 
 FROM products;
@@ -111,7 +111,7 @@ FROM products;
 -- Stainless Steel Bottle | 22.00
 
 
--- Example 4 — Rename Column Output Using Column Aliases Goal
+-- Example 4 — Rename Column Output Using Column Aliases
 -- Using 'AS' to rename column headers in the output
 SELECT 
     product_name AS Item, 
@@ -129,7 +129,7 @@ FROM products;
 -- Stainless Steel Bottle | 22.00
 
 
--- Example 5 — Perform Arithmetic Calculations in SELECT Goal
+-- Example 5 — Perform Arithmetic Calculations in SELECT
 -- Calculating 90% of price to show discounted price
 SELECT product_name, price, price * 0.90 AS discounted_price 
 FROM products;
@@ -145,7 +145,7 @@ FROM products;
 -- Stainless Steel Bottle | 22.00  | 19.8000
 
 
--- Example 6 — Combine First and Last Names (String Concatenation) Goal
+-- Example 6 — Combine First and Last Names (String Concatenation)
 -- Concatenating strings in PostgreSQL using ||
 SELECT first_name || ' ' || last_name AS full_name 
 FROM customers;
@@ -161,7 +161,7 @@ FROM customers;
 -- Carlos Gomez
 
 
--- Example 7 — Select Unique Categories Using DISTINCT Goal
+-- Example 7 — Select Unique Categories Using DISTINCT
 -- Select distinct categories
 SELECT DISTINCT category 
 FROM products;
@@ -171,3 +171,22 @@ FROM products;
 -- Kitchenware
 -- Electronics
 -- Furniture
+
+
+-- Example 8 — Calculate Total Inventory Value Per Product
+-- Multiply two columns together
+SELECT 
+    product_name, 
+    price, stock_quantity, 
+    (price * stock_quantity) AS total_inventory_value 
+FROM products;
+
+-- Result:
+-- product_name          | price  | stock_quantity | total_inventory_value
+-- Wireless Mouse        | 25.50  | 150            | 3825.00
+-- Mechanical Keyboard   | 85.00  | 40             | 3400.00
+-- USB-C Cable           | 12.00  | 200            | 2400.00
+-- Ergonomic Chair       | 250.00 | 15             | 3750.00
+-- Standing Desk         | 450.00 | 8              | 3600.00
+-- Coffee Mug            | 15.00  | 0              | 0.00
+-- Stainless Steel Bottle | 22.00  | 75             | 1650.00
