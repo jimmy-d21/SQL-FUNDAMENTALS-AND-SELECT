@@ -64,7 +64,7 @@ INSERT INTO orders (customer_id, order_date, total_amount, status) VALUES
 
 
 -- Example 1 — Select All Columns from Customers
--- Retrieve every column and row from customers
+-- GOAL: Retrieve every column and row from customers
 SELECT * 
 FROM customers;
 
@@ -80,7 +80,7 @@ FROM customers;
 
 
 -- Example 2 — Select Specific Columns
--- Retrieve specific columns
+-- GOAL: Retrieve specific columns
 SELECT first_name, last_name, email 
 FROM customers;
 
@@ -96,7 +96,7 @@ FROM customers;
 
 
 -- Example 3 — Select Product Names and Prices
--- Retrieve product details
+-- GOAL: Retrieve product details
 SELECT product_name, price 
 FROM products;
 
@@ -112,7 +112,7 @@ FROM products;
 
 
 -- Example 4 — Rename Column Output Using Column Aliases
--- Using 'AS' to rename column headers in the output
+-- GOAL: Using 'AS' to rename column headers in the output
 SELECT 
     product_name AS Item, 
     price AS Cost_in_USD 
@@ -130,7 +130,7 @@ FROM products;
 
 
 -- Example 5 — Perform Arithmetic Calculations in SELECT
--- Calculating 90% of price to show discounted price
+-- GOAL: Calculating 90% of price to show discounted price
 SELECT product_name, price, price * 0.90 AS discounted_price 
 FROM products;
 
@@ -146,7 +146,7 @@ FROM products;
 
 
 -- Example 6 — Combine First and Last Names (String Concatenation)
--- Concatenating strings in PostgreSQL using ||
+-- GOAL: Concatenating strings in PostgreSQL using ||
 SELECT first_name || ' ' || last_name AS full_name 
 FROM customers;
 
@@ -174,7 +174,7 @@ FROM products;
 
 
 -- Example 8 — Calculate Total Inventory Value Per Product
--- Multiply two columns together
+-- GOAL: Multiply two columns together
 SELECT 
     product_name, 
     price, stock_quantity, 
@@ -193,7 +193,7 @@ FROM products;
 
 
 -- Example 9 — Find Unique Customer Countries
--- Find unique countries
+-- GOAL: Find unique countries
 SELECT DISTINCT country 
 FROM customers;
 
@@ -208,7 +208,7 @@ FROM customers;
 
 
 -- Example 10 — Select Order Status Options
--- Get unique statuses
+-- GOAL: Get unique statuses
 SELECT DISTINCT status 
 FROM orders;
 
@@ -221,7 +221,7 @@ FROM orders;
 
 
 -- Example 11 — Filter Exact Match with WHERE (=)
--- Filter rows using WHERE and equality operator
+-- GOAL: Filter rows using WHERE and equality operator
 SELECT * 
 FROM customers 
 WHERE country = 'USA';
@@ -233,7 +233,7 @@ WHERE country = 'USA';
 
 
 -- Example 12 — Filter Products Greater Than a Price (>)
--- Filter for prices strictly greater than 50
+-- GOAL: Filter for prices strictly greater than 50
 SELECT product_name, price 
 FROM products 
 WHERE price > 50.00;
@@ -246,7 +246,7 @@ WHERE price > 50.00;
 
 
 -- Example 13 — Filter Products Less Than or Equal To (<=)
--- Filter using <= operator
+-- GOAL: Filter using <= operator
 SELECT product_name, price 
 FROM products 
 WHERE price <= 25.50;
@@ -260,7 +260,7 @@ WHERE price <= 25.50;
 
 
 -- Example 14 — Filter with Not Equal Operator (<>)
--- Select non-electronics products
+-- GOAL: Select non-electronics products
 SELECT product_name, category 
 FROM products 
 WHERE category <> 'Electronics';
@@ -274,7 +274,7 @@ WHERE category <> 'Electronics';
 
 
 -- Example 15 — Filter Orders using Less Than (<)
--- Orders under $100
+-- GOAL: Orders under $100
 SELECT order_id, total_amount, status 
 FROM orders 
 WHERE total_amount < 100.00;
@@ -288,7 +288,7 @@ WHERE total_amount < 100.00;
 
 
 -- Example 16 — Filter with AND Condition
--- Both conditions must be TRUE
+-- GOAL: Both conditions must be TRUE
 SELECT product_name, category, price 
 FROM products 
 WHERE category = 'Electronics' AND price < 50.00;
@@ -300,7 +300,7 @@ WHERE category = 'Electronics' AND price < 50.00;
 
 
 -- Example 17 — Filter with OR Condition
--- Either condition can be TRUE
+-- GOAL: Either condition can be TRUE
 SELECT first_name, last_name, country 
 FROM customers 
 WHERE country = 'USA' OR country = 'Germany';
@@ -313,7 +313,7 @@ WHERE country = 'USA' OR country = 'Germany';
 
 
 -- Example 18 — Combine AND with OR Using Parentheses
--- Use parentheses to group logical conditions correctly
+-- GOAL: Use parentheses to group logical conditions correctly
 SELECT product_name, category, stock_quantity 
 FROM products 
 WHERE (category = 'Electronics' OR category = 'Furniture') 
@@ -328,7 +328,7 @@ WHERE (category = 'Electronics' OR category = 'Furniture')
 
 
 -- Example 19 — Filter Using NOT Operator
--- Negating a condition
+-- GOAL: Negating a condition
 SELECT first_name, country 
 FROM customers 
 WHERE NOT (country = 'USA');
@@ -343,7 +343,7 @@ WHERE NOT (country = 'USA');
 
 
 -- Example 20 — Filter Orders by Greater Than or Equal To Date (>=)
--- Filtering dates
+-- GOAL: Filtering dates
 SELECT order_id, order_date, total_amount 
 FROM orders 
 WHERE order_date >= '2024-02-01';
@@ -353,3 +353,18 @@ WHERE order_date >= '2024-02-01';
 -- 5        | 2024-02-01 | 85.00
 -- 6        | 2024-02-05 | 37.00
 -- 7        | 2024-02-10 | 12.00
+
+
+-- Example 21 — Filter Multiple Specific Values with IN
+-- GOAL: Match against a list of options using IN
+SELECT first_name, country 
+FROM customers 
+WHERE country IN ('USA', 'Japan', 'Germany');
+
+-- Result:
+-- first_name | country
+-- John       | USA
+-- Anna       | Germany
+-- Kenji      | Japan
+-- Sarah      | USA
+
