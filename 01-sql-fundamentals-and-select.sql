@@ -648,3 +648,19 @@ ORDER BY country ASC;
 -- Philippines
 -- Spain
 -- USA
+
+
+-- Example 40 — Practical E-Commerce Search Query
+-- GOAL: Search for orders placed in January 2024 with a total over $100, showing the largest order first.
+-- Complex filtering and sorting query
+SELECT order_id, order_date, total_amount, status 
+FROM orders 
+WHERE order_date BETWEEN '2024-01-01' AND '2024-01-31' 
+  AND total_amount > 100.00 
+ORDER BY total_amount DESC;
+
+-- Result:
+-- order_id | order_date | total_amount | status
+-- 4        | 2024-01-20 | 450.00       | Pending
+-- 2        | 2024-01-12 | 250.00       | Completed
+-- 1        | 2024-01-10 | 110.50       | Completed
