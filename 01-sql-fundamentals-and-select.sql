@@ -777,3 +777,19 @@ HAVING COUNT(*) > 2;
 -- Result:
 -- category    | product_count
 -- Electronics | 3
+
+
+-- Example 50 — Complete Summary Query with Filtering, Grouping, Having, and Sorting
+-- GOAL: Find categories with average product price over $20.00, sorted by average price descending.
+-- Full beginner summary query
+SELECT category, ROUND(AVG(price), 2) AS avg_price, COUNT(*) AS item_count 
+FROM products 
+WHERE stock_quantity > 0 
+GROUP BY category 
+HAVING AVG(price) > 20.00 
+ORDER BY avg_price DESC;
+
+-- Result:
+-- category    | avg_price | item_count
+-- Furniture   | 350.00    | 2
+-- Electronics | 40.83     | 3
