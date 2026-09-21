@@ -205,3 +205,16 @@ FROM customers;
 -- Japan
 -- Canada
 -- Spain
+
+
+-- Example 10 — Select Order Status Options
+-- Get unique statuses
+SELECT DISTINCT status 
+FROM orders;
+
+-- Result:
+-- status
+-- Cancelled
+-- Completed
+-- Pending
+-- Shipped
