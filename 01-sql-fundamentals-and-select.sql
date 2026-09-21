@@ -159,3 +159,15 @@ FROM customers;
 -- Kenji Sato
 -- Sarah Connor
 -- Carlos Gomez
+
+
+-- Example 7 — Select Unique Categories Using DISTINCT Goal
+-- Select distinct categories
+SELECT DISTINCT category 
+FROM products;
+
+-- Result:
+-- category
+-- Kitchenware
+-- Electronics
+-- Furniture
