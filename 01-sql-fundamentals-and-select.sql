@@ -409,3 +409,16 @@ WHERE product_name LIKE 'S%';
 -- product_name
 -- Standing Desk
 -- Stainless Steel Bottle
+
+
+-- Example 25 — Case-Insensitive Pattern Matching with ILIKE
+-- GOAL: Search for customers whose city contains 'york' regardless of uppercase/lowercase.
+-- ILIKE is PostgreSQL-specific for case-insensitive pattern matching
+SELECT first_name, city 
+FROM customers 
+WHERE city ILIKE '%york%';
+
+-- Result:
+-- first_name | city
+-- John       | New York
+-- Sarah      | New York
