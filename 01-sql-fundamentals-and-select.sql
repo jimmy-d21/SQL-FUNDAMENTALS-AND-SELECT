@@ -664,3 +664,14 @@ ORDER BY total_amount DESC;
 -- 4        | 2024-01-20 | 450.00       | Pending
 -- 2        | 2024-01-12 | 250.00       | Completed
 -- 1        | 2024-01-10 | 110.50       | Completed
+
+
+-- Example 41 — Count Total Rows with COUNT(*)
+-- GOAL: Count total number of registered customers.
+-- Count total rows in table
+SELECT COUNT(*) AS total_customers 
+FROM customers;
+
+-- Result:
+-- total_customers
+-- 7
