@@ -631,3 +631,20 @@ ORDER BY email ASC;
 -- Sarah      | sarah.c@example.com
 -- David      | NULL
 -- Carlos     | NULL
+
+
+-- Example 39 — Combined DISTINCT and ORDER BY
+-- GOAL: Get a unique list of countries sorted alphabetically.
+-- Unique values sorted alphabetically
+SELECT DISTINCT country 
+FROM customers 
+ORDER BY country ASC;
+
+-- Result:
+-- country
+-- Canada
+-- Germany
+-- Japan
+-- Philippines
+-- Spain
+-- USA
