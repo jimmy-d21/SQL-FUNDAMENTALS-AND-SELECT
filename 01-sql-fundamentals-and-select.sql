@@ -382,3 +382,17 @@ WHERE country NOT IN ('USA', 'Canada');
 -- Anna       | Germany
 -- Kenji      | Japan
 -- Carlos     | Spain
+
+
+-- Example 23 — Filter Values in a Range using BETWEEN
+-- GOAL: Find products priced between $20.00 and $100.00 inclusive.
+-- Range filter with BETWEEN
+SELECT product_name, price 
+FROM products 
+WHERE price BETWEEN 20.00 AND 100.00;
+
+-- Result:
+-- product_name          | price
+-- Wireless Mouse        | 25.50
+-- Mechanical Keyboard   | 85.00
+-- Stainless Steel Bottle | 22.00
