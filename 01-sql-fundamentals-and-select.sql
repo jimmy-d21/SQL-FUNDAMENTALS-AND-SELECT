@@ -93,3 +93,18 @@ FROM customers;
 -- Kenji      | Sato      | kenji.s@example.jp
 -- Sarah      | Connor    | sarah.c@example.com
 -- Carlos     | Gomez     | NULL
+
+-- Example 3 — Select Product Names and Prices Goal
+-- Retrieve product details
+SELECT product_name, price 
+FROM products;
+
+-- Result:
+-- product_name          | price
+-- Wireless Mouse        | 25.50
+-- Mechanical Keyboard   | 85.00
+-- USB-C Cable           | 12.00
+-- Ergonomic Chair       | 250.00
+-- Standing Desk         | 450.00
+-- Coffee Mug            | 15.00
+-- Stainless Steel Bottle | 22.00
