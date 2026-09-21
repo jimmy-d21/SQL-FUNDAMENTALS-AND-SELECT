@@ -340,3 +340,16 @@ WHERE NOT (country = 'USA');
 -- Anna       | Germany
 -- Kenji      | Japan
 -- Carlos     | Spain
+
+
+-- Example 20 — Filter Orders by Greater Than or Equal To Date (>=)
+-- Filtering dates
+SELECT order_id, order_date, total_amount 
+FROM orders 
+WHERE order_date >= '2024-02-01';
+
+-- Result:
+-- order_id | order_date | total_amount
+-- 5        | 2024-02-01 | 85.00
+-- 6        | 2024-02-05 | 37.00
+-- 7        | 2024-02-10 | 12.00
