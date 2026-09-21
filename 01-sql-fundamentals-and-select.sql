@@ -675,3 +675,13 @@ FROM customers;
 -- Result:
 -- total_customers
 -- 7
+
+
+-- Example 42 — Count Non-NULL Values in a Specific Column
+-- GOAL: -- Count non-null column values
+SELECT COUNT(email) AS customers_with_email 
+FROM customers;
+
+-- Result:
+-- customers_with_email
+-- 5
