@@ -464,3 +464,20 @@ WHERE email IS NOT NULL;
 -- Anna       | anna.m@example.de
 -- Kenji      | kenji.s@example.jp
 -- Sarah      | sarah.c@example.com
+
+
+-- Example 29 — Filter Out Matching Patterns using NOT LIKE
+-- GOAL: Find products whose names do NOT contain the word 'Wireless'.
+-- Negating pattern match
+SELECT product_name 
+FROM products 
+WHERE product_name NOT LIKE '%Wireless%';
+
+-- Result:
+-- product_name
+-- Mechanical Keyboard
+-- USB-C Cable
+-- Ergonomic Chair
+-- Standing Desk
+-- Coffee Mug
+-- Stainless Steel Bottle
