@@ -718,3 +718,20 @@ FROM products;
 -- Result:
 -- lowest_price | highest_price
 -- 12.00        | 450.00
+
+
+-- Example 46 — Text Transformation with String Functions
+-- GOAL: Convert customer last names to UPPERCASE and calculate text length.
+-- String transformation functions
+SELECT last_name, UPPER(last_name) AS upper_name, LENGTH(last_name) AS name_length 
+FROM customers;
+
+-- Result:
+-- last_name | upper_name | name_length
+-- Smith     | SMITH      | 5
+-- Cruz      | CRUZ       | 4
+-- Lee       | LEE        | 3
+-- Müller    | MÜLLER     | 6
+-- Sato      | SATO       | 4
+-- Connor    | CONNOR     | 6
+-- Gomez     | GOMEZ      | 5
