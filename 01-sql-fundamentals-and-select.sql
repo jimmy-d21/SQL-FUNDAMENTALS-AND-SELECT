@@ -422,3 +422,16 @@ WHERE city ILIKE '%york%';
 -- first_name | city
 -- John       | New York
 -- Sarah      | New York
+
+
+-- Example 26 — Pattern Matching Single Character with Underscore (_)
+-- GOAL: Find products where the second letter of the category name is 'u'.
+-- _ wildcard matches exactly one character
+SELECT product_name, category 
+FROM products 
+WHERE category LIKE '_u%';
+
+-- Result:
+-- product_name   | category
+-- Ergonomic Chair| Furniture
+-- Standing Desk  | Furniture
