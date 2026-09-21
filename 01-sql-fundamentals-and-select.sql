@@ -707,3 +707,14 @@ FROM orders;
 -- Result:
 -- average_order_value
 -- 138.5714285714285714
+
+
+-- Example 45 — Find Min and Max Product Prices
+-- GOAL: Determine the cheapest and most expensive product prices in stock.
+-- Get minimum and maximum values
+SELECT MIN(price) AS lowest_price, MAX(price) AS highest_price 
+FROM products;
+
+-- Result:
+-- lowest_price | highest_price
+-- 12.00        | 450.00
