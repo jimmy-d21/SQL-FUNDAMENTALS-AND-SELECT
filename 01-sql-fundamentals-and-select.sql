@@ -533,3 +533,21 @@ ORDER BY total_amount DESC;
 -- 6        | 37.00        | Completed
 -- 3        | 25.50        | Shipped
 -- 7        | 12.00        | Pending
+
+
+-- Example 33 — Multi-Column Sorting
+-- GOAL: Sort products by category alphabetically, and then by price from highest to lowest within each category.
+-- Sorting by multiple columns
+SELECT category, product_name, price 
+FROM products 
+ORDER BY category ASC, price DESC;
+
+-- Result:
+-- category    | product_name          | price
+-- Electronics | Mechanical Keyboard   | 85.00
+-- Electronics | Wireless Mouse        | 25.50
+-- Electronics | USB-C Cable           | 12.00
+-- Furniture   | Standing Desk         | 450.00
+-- Furniture   | Ergonomic Chair       | 250.00
+-- Kitchenware | Stainless Steel Bottle | 22.00
+-- Kitchenware | Coffee Mug            | 15.00
