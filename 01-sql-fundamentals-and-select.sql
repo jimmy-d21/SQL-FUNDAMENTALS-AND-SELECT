@@ -94,6 +94,7 @@ FROM customers;
 -- Sarah      | Connor    | sarah.c@example.com
 -- Carlos     | Gomez     | NULL
 
+
 -- Example 3 — Select Product Names and Prices Goal
 -- Retrieve product details
 SELECT product_name, price 
@@ -108,6 +109,7 @@ FROM products;
 -- Standing Desk         | 450.00
 -- Coffee Mug            | 15.00
 -- Stainless Steel Bottle | 22.00
+
 
 -- Example 4 — Rename Column Output Using Column Aliases Goal
 -- Using 'AS' to rename column headers in the output
@@ -126,3 +128,18 @@ FROM products;
 -- Coffee Mug            | 15.00
 -- Stainless Steel Bottle | 22.00
 
+
+-- Example 5 — Perform Arithmetic Calculations in SELECT Goal
+-- Calculating 90% of price to show discounted price
+SELECT product_name, price, price * 0.90 AS discounted_price 
+FROM products;
+
+-- Result:
+-- product_name          | price  | discounted_price
+-- Wireless Mouse        | 25.50  | 22.9500
+-- Mechanical Keyboard   | 85.00  | 76.5000
+-- USB-C Cable           | 12.00  | 10.8000
+-- Ergonomic Chair       | 250.00 | 225.0000
+-- Standing Desk         | 450.00 | 405.0000
+-- Coffee Mug            | 15.00  | 13.5000
+-- Stainless Steel Bottle | 22.00  | 19.8000
