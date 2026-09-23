@@ -62,3 +62,24 @@ WHERE id >= 4;
 -- 4  | Cheese Dog  |  95.00 |             30 | t
 -- 5  | Milk Tea    | 110.00 |             45 | t
 -- 6  | Onion Rings |  75.00 |             20 | t
+
+
+-- Example 4 — Insert Data into Specific Columns Only
+-- GOAL: Insert a product while supplying values for only required/specific columns (name and price).
+-- Insert product with specific columns only
+INSERT INTO products (name, price)
+VALUES ('Choco Sundae', 50.00);
+
+-- Verify inserted data
+SELECT id, name, price, stock_quantity, is_available
+FROM products
+WHERE name = 'Choco Sundae';
+
+
+-- Command Result:
+-- INSERT 0 1
+
+-- Verification Query Result:
+-- id | name         | price | stock_quantity | is_available
+-- ---+--------------+-------+----------------+--------------
+-- 7  | Choco Sundae | 50.00 |              0 | t
