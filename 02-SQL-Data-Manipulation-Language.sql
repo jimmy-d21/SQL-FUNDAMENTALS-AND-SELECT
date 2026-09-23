@@ -37,3 +37,28 @@ WHERE email = 'evan@example.com';
 -- id | name        | email            | membership_level | created_at
 -- ---+-------------+------------------+------------------+------------
 -- 5  | Evan Wright | evan@example.com | Standard         | 2026-09-22
+
+
+-- Example 3 — Insert Multiple Rows in a Single Query
+-- GOAL: Insert three new products into the products table using one INSERT statement.
+-- Insert three products at once
+INSERT INTO products (name, price, stock_quantity, is_available)
+VALUES 
+  ('Cheese Dog', 95.00, 30, true),
+  ('Milk Tea', 110.00, 45, true),
+  ('Onion Rings', 75.00, 20, true);
+
+-- Verify inserted data
+SELECT id, name, price, stock_quantity, is_available
+FROM products
+WHERE id >= 4;
+
+-- Command Result:
+-- INSERT 0 3
+
+-- Verification Query Result:
+-- id | name        | price  | stock_quantity | is_available
+-- ---+-------------+--------+----------------+--------------
+-- 4  | Cheese Dog  |  95.00 |             30 | t
+-- 5  | Milk Tea    | 110.00 |             45 | t
+-- 6  | Onion Rings |  75.00 |             20 | t
